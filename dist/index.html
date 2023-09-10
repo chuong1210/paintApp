@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+   <div class="container flex w-full max-w-[1050px] gap-3 p-3  ">
+    <section class="tools-board pr-4 ">
+        <div class="row">
+            <label for="" class="title ml-3">Shape</label>
+            <ul class="options ">
+                <li class="option tool" id="retangle"> 
+                    <i class="uil uil-square"></i>  
+                    <span>Retangle</span>  
+                </li>
+    
+                <li class="option tool" id="circle"> 
+                    <i class="uil uil-circle"></i>               
+                 <span>Circle</span>      
+                    </li>
+                <li class="option tool" id="triangle"> 
+                    <i class="uil uil-triangle"></i>
+                  <span>Triangle</span>      
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" name="" id="fill-color">
+                        <label for="fill-color">Fill color</label>
+
+                        </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <label for="" class="title ml-3">Options</label>
+            <ul class="options">
+                <li class="option active tool " id="brush" >
+                    <i class="uil uil-edit-alt"></i>                    <span>Brush</span>  
+                </li>
+    
+                <li class="option tool"  id="eraser" >
+                    <i class="uil uil-capsule"></i>
+                                     <span>Eraser</span>      
+                    </li>
+              
+                    <li class="option">
+                        <input type="range" name="" id="slide" min="1" max="30" value="5">
+                  
+            </ul>
+        </div>
+        <div class="row colors">
+            <label for="" class="title ml-3">Color</label>
+            
+            <ul class="options">
+                <li class="option"></li>
+                <li class="option"></li>
+                <li class="option"></li>
+                <li class="option"></li>
+                <li class="option selected"><input type="color" id="color-picker"></li>
+
+            </ul>
+        </div>
+        <div class="row buttons">
+           <button class="clear-canvas">
+            Clear Canvas
+          </button>
+          <button class="save-img">
+            Save As Image          </button>
+        </div>
+
+    </section>
+    <section class="drawing-board flex-1">
+        <canvas></canvas>
+    </section>
+   </div>
+   <script src="script.js"></script>
+
+</body>
+</html>
