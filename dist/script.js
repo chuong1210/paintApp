@@ -26,7 +26,7 @@ window.addEventListener("load",()=>
     canvas.height=canvas.offsetHeight;
     setCanvasBackground();
 
-})
+}) //fundamental in this function is làm cho section canvas có kích thước bằng đúng kích thước hiển thị tên màn hình trắng
 
 const drawRect=(e)=>
 {
@@ -36,7 +36,9 @@ const drawRect=(e)=>
 
     }
     else
-    ctx.fillRect(e.offsetX,e.offsetY,prevMosueX-e.offsetX,prevMosueY-e.offsetY);
+    {
+    ctx.fillRect(e.offsetX,e.offsetY,prevMosueX-e.offsetX,prevMosueY-e.offsetY); //fill the retangle
+    }
 
 
 }
@@ -68,8 +70,8 @@ const startDraw=(e)=>
     ctx.strokeStyle=selectedColor;
     ctx.fillStyle=selectedColor;
 
-    ctx.lineWidth=burshWidth;
-    snapShot=ctx.getImageData(0,0,canvas.width,canvas.height); //tránh hình bị lặp
+    ctx.lineWidth=burshWidth; //độ to nhỏ của brush
+    snapShot=ctx.getImageData(0,0,canvas.width,canvas.height); //tránh hình bị lặp sọc sọc
 }
 const drawing=(e)=>
 {
